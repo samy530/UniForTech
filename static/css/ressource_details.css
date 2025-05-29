@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'Open sans',sans-serif;
+    background-color: black;
+}
+body {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  max-width: 1349px;
+}
+.book-details-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+} 
+.book-details-info {
+    padding: 1em;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .book-details-pdf {
+    padding: 1em;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 11px;
+  }
+  .book-details-info h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .book-details-info p {
+    font-size: 21px;
+    margin: 0;
+    width: 80%;
+  }
+.text:hover{
+    text-decoration: none;
+
+}
+  .book-details-info .book-image{
+    display: flex;
+    align-items: end;
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    justify-content: flex-end;
+    float: right;}
+    embed {
+        width: 600px;
+        height: 117vh;
+        border-radius: 6px;
+    }
+    .button-wrapper {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+      }
+      
+      .button {
+        display: inline-block;
+        width: 187px;
+        height: 50px;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        line-height: 50px;
+        border: 2px solid #fff;
+        border-radius: 0.45em;
+        position: relative;
+        transition: background 0.3s;
+        font-weight: 700;
+      }
+    .button-wrapper a:hover{
+       text-decoration: none;
+       color: white;
+    }
+    p .user-hover:hover{
+        text-decoration: underline;
+        color: white;
+    }
+      .button:hover {
+        background: #000000;
+      }
+      
+      .icon {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        transition: top 0.5s;
+      }
+      
+      .button:hover .icon {
+        top: 0;
+      }
+    .icon:hover{
+        background-color:#9f1016;
+    }
+      .text {
+        transition: top 0.5s;
+      }
+      
+      .button:hover .text {
+        top: -100%;
+      }
+      
+      .boutoncontainer {
+        width: 100%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px²;
+      }
+    /*bouton
+    .button {
+      --width: 187px;
+      --height: 50px;
+      --tooltip-height: 35px;
+      --tooltip-width: 90px;
+      --gap-between-tooltip-to-button: 18px;
+      --button-color: #000000;
+      --tooltip-color: #fff;
+      width: var(--width);
+      height: var(--height);
+      border: 2px solid white;
+      position: relative;
+      text-align: center;
+      border-radius: 0.45em;
+      transition: background 0.3s;
+      font-weight: 700;
+    }
+    
+    .button::before {
+      position: absolute;
+      content: attr(data-tooltip);
+      width: var(--tooltip-width);
+      height: var(--tooltip-height);
+      background-color: var(--tooltip-color);
+      font-size: 0.9rem;
+      color: #000;
+      border-radius: .25em;
+      line-height: var(--tooltip-height);
+      bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+      left: calc(50% - var(--tooltip-width) / 2);
+    }
+    
+    .button::after {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      border: 10px solid transparent;
+      border-top-color: var(--tooltip-color);
+      left: calc(50% - 10px);
+      bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+    }
+    
+    .button::after,.button::before {
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.5s;
+    }
+    
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    
+    .button-wrapper,.text,.icon {
+      overflow: hidden;
+      font-size: 18px;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      color: #fff;
+    }
+    
+    .text {
+      top: 0
+    }
+    
+    .text,.icon {
+      transition: top 0.5s;
+    }
+    
+    .icon {
+      color: #fff;
+      top: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .icon svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .button:hover {
+      background: #9f1016;
+      border: 2px solid white;
+    }
+    
+    .button:hover .text {
+      top: -100%;
+    }
+    
+    .button:hover .icon {
+      top: 0;
+    }
+    .button:hover:after {
+      bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+    }
+    
+    .button:hover:before {
+      bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+    }
+    .boutoncontainer {
+      width: 100%;
+      height: 25%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2em;
+  }*/
+  /*_______________endbtn*/
+  hr.titleline {
+    width: 90%;
+    margin-left: 3px;
+    margin-top: 1.7em;
+    height: 0.5px;
+    background-color: #9f1016;
+    border: none;
+}
+.descriptitle p {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.lantitle p {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.langue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  margin-left: 2em;
+}
+
+.booktitle {
+  width: 100%;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.infocontainer {
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  color: white;
+}
+p.title {
+font-size: 7em;
+margin-top: -3em;
+}
+
+span {
+margin-right: 1em;
+}
+p.booktitle {font-size: 3em;font-weight: lighter;}
+
+.description {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+width: 100%;
+margin-bottom: 2em;
+margin-left: 2em;
+}
+.niveau {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin-left: 2em;
+}
+
+.nivtitle p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.categorie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin-left: 2em;
+}
+
+.username {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    margin-left: 2em;
+}
+
+.cattitle p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.usertitle p {
+    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.usercontenu a {
+    color: white;
+    font-weight: 600;
+}
+.back-arrow {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    padding-left: 20px;
+    transition: color 0.2s;
+    margin-left:30px;
+    margin-top: 50px;
+    background-color: white;
+}
+
+.back-arrow::before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%) rotate(-45deg);
+    transition: left 0.2s, border-color 0.2s;
+}
+
+.back-arrow:hover {
+    color: #f40000;
+}
+
+.back-arrow:hover::before {
+    left: -5px;
+    border-color: #b30000;
+}     

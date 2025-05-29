@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*
+.title_ressource {
+  color: white;
+  font-size: 3em;
+  width: 80%;
+  margin-top: 2em;
+  padding-left: 1em;
+  text-align: left;
+  z-index: 1;
+}
+*/
+body {
+  background-color: #ffffff;
+}
+*{
+  margin: 0%;
+  padding: 0%;
+  font-family: 'Open sans',sans-serif;
+  max-width: 1349px;
+}
+
+
+.filter-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px;
+  margin-top: 20px;
+}
+a:hover{
+  text-decoration: none;
+  color: white;
+}
+.filter-select {
+  color: white;
+  padding: 10px;
+  border: 1px solid #090909;
+  border-radius: 20px;
+  width: 192px;
+  height: 64px;
+  text-align: center;
+  font-size: 23px;
+  background-color: rgb(111 111 111 / 70%);
+  transition: border-color 0.3s ease;
+  margin-right: 40px;
+  cursor: pointer;
+}
+.filter-select:hover {
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.5);
+  border:1px solid white;
+}
+.filter-select:focus {
+  outline: none;
+  border-color: #ffffff;
+}
+.button-container {
+  z-index: 3;
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+}
+
+.Documents-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  height: 56px;
+  border: none;
+  padding: 0px 16px;
+  border-radius: 5px;
+  background-color: #9f1016;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.folderContainer {
+  width: 40px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.fileBack {
+  z-index: 1;
+  width: 80%;
+  height: auto;
+}
+.filePage {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  transition: all 0.3s ease-out;
+}
+.fileFront {
+  width: 85%;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  opacity: 0.95;
+  transform-origin: bottom;
+  transition: all 0.3s ease-out;
+}
+.text {
+  color: white;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+.Documents-btn:hover .filePage {
+  transform: translateY(-5px);
+}
+.Documents-btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+.Documents-btn:active {
+  transform: scale(0.95);
+}
+.Documents-btn:hover .fileFront {
+  transform: rotateX(30deg);
+}
+
+/*ARRIVALS*/
+.arrivals{
+  width: 100%;
+  height: 100vh;
+  margin-bottom: 500px;
+}
+
+hr {
+  border: 1px;
+  height: 1px;
+  background-color: black;
+  margin: 20px 0;
+  width: 100em;
+}
+.maintitles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+.arrivals h1 {
+  font-size: 50px;
+  text-align: center;
+  padding: 3px 1px;
+  color: rgb(0, 0, 0);
+  margin-top: 10px;
+}
+
+.arrivals .arrivals_box{
+  width: 100%;
+  margin: 0em auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2em 0;
+  margin-top: 2em;
+}
+
+.arrivals .arrivals_box .arrivals_card{
+  width: 300px;
+  height: 350px;
+  text-align: center;
+  padding: 5px;
+  margin: auto 1em;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 6px;
+  border: 1px solid #8a868654;
+  background-color: rgb(15 13 51);
+}
+
+.arrivals .arrivals_box .arrivals_card:hover {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.3) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.3) 0px 0px 0px 1px inset;
+  }
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image {
+  width: 98%;
+  height: 70%; /* ou ajustez selon vos besoins */
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.arrivals .arrivals_box .arrivals_card:hover .arrivals_image {
+  transform: scale(1.01); /* Effet de zoom au survol */
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag p{
+  font-size: 20px;
+  margin: 6px 0;
+  color: rgb(255 255 255);
+  width: 76%;
+}
+
+.overlaytt .arrivals_btn {
+  color: #ffffff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  z-index: 3; /* S'assure que le bouton est au-dessus de l'overlay */
+  cursor: pointer;
+  border: 2px solid white;
+  transition:  height 0.3s ease;
+  opacity: 0;
+}
+.arrivals_tag {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3px;
+  position: relative;
+  z-index: 1;
+}
+hr.resline {
+  border: 0.8px;
+  height: 0.8px;
+  background-color: #9f1016;
+  width: 70%;
+  margin: 0px;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(255 255 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0 0 0);
+  font-size: 17px;
+  font-weight: 600;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.arrivals_tag p a {
+  text-decoration: none;
+  color: white;
+}
+.overlaytt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0; /* Assurez-vous que l'overlay est initialement invisible */
+  transition: opacity 0.3s ease; /* Ajoutez une transition pour une apparition en douceur */
+  background-color: rgb(15 13 51 / 80%);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 4px;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.arrivals_card:hover .overlaytt {
+  opacity: 1;
+  width: 100%;
+}
+
+.arrivals_image .overlay_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajustez la couleur selon vos besoins */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; /* S'assure que l'overlay de l'image est au-dessus de l'image mais en dessous de l'overlay de la carte */
+}
+
+
+.arrivals_image {
+  position: relative;
+}
+
+.arrivals_card:hover .overlaytt .arrivals_btn {
+  opacity: 1;
+}
+
+
+
+hr.hrhead {
+  background-color: #9f1016;
+  width: 71%;
+  height: 0.5px;
+  margin: auto;
+  margin-top: 2em;
+  margin-left: 4em;
+}
+.headp {
+  color: white;
+  font-size: 2em;
+  margin-top: 1em;
+  margin-left: 3em;
+  margin-bottom: 1em;
+}
+
+.header1 {
+  width: 100vw;
+  height: 85vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  background-size: cover;
+  background-image: url(../img/ressource.jpeg);
+}
+h1 {
+  color: white;
+  font-size: 3em;
+  width: 80%;
+  margin-top: 1em;
+  padding-left: 1em;
+  text-align: left;
+  z-index: 1;
+}
+
+.intro {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 23em;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  background-color: #0f0d33;
+}
+
+.intro img {
+  width: 25em;
+  height: 300px;
+  margin-top: 0em;
+  margin-left: 8em;
+  transition: transform 5s, filter 3s ease-in-out;
+  border-radius: 6px;
+}
+
+.introimg {
+  width: 40%;
+  overflow: hidden;
+  transition: transform 2s, filter 1.5s ease-in-out;
+  transform-origin: center center;
+  filter: brightness(70%);
+}
+.introimg:hover{
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+p.introp {
+color: white;
+width: 96%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: start;
+font-size: 1.2em;
+margin-left: -4em;
+}
+
+.introtxt {
+  height: 100%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: -8em;
+}
+p.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.intro p {
+  width: 66%;
+}
+p.txt {
+font-size: 20px;
+}
+
+hr.introline {
+  border: 0.5px;
+  height: 0.5px;
+  background-color: rgba(0,131,141,0.7);
+  width: 50%;
+  margin-left: -136px;
+  margin-top: 2px;
+  margin-bottom: 13px;
+}
+.button-container .fileBack path {
+  fill: rgb(128, 79, 16);
+}
+
+.button-container .filePage rect {
+  fill: rgb(255, 255, 255);
+}
+
+.button-container .fileFront path {
+  fill: rgb(153, 115, 46);
+}
+
+  footer {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background-color: black;
+    width: 100%;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -2em;
+    width: 70%;
+  }
+  
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  .logo-footer img {
+    width: 110px; /* Ajustez la taille du logo selon vos besoins */
+    height: auto;
+    margin-right: 15px;
+  }
+  
+  .right-column {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    margin-top: 5em;
+  }
+  
+  .useful-links,
+  .social-media {
+    margin-bottom: 20px;
+  }
+  
+  .useful-links h4,
+  .social-media h4 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .useful-links ul,
+  .social-media ul {
+    list-style: none;
+    padding: 0;
+    color: #9f1016;
+  }
+  
+  .useful-links li,
+  .social-media li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2em;
+    width: 90%;
+  }.txt-log.footer-log {
+    font-size: 15px;
+    margin-top: -2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 4px;
+  }
+  
+  .address {
+    font-size: 1.5em;
+    margin-bottom: -2em;
+    margin-top: 1em;
+  }
+  
+  a {
+    color: #ffffff;
+  }
+  a:hover{
+    color: #c10510;
+  }
+  
+  ul :hover{
+    color: #c10510;
+  }
+  hr {background-color: #c10510;width: 66em;border: 0.5px solid #c10510;}
+  
+  .logo_footer {
+      margin-top: 4em;
+  }
+  .title-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.raccourci h4 {
+    font-size: 31px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.raccourci ul {
+    font-size: 25px;
+    margin: 15px 0;
+    line-height: 33px;
+}
+
+.social-icons a {
+    font-size: 35px;
+    margin: 0px 20px;
+    color: #fff;
+}
+
+.social-icons a :hover{
+    color: #c10510;
+}
+.social-icons {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-bottom p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.unifortech-txt {
+  margin-top: 3.5em;
+  font-weight: 500;
+  margin-left: -164px;
+}
+.circle{
+ list-style-type: circle;
+  color: white; 
+}

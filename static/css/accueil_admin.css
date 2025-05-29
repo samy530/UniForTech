@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(27, 27, 50);
+}
+.container {
+    display: flex; /* Pour afficher les éléments enfants en ligne */
+    justify-content: space-around; /* Pour répartir l'espace autour des éléments */
+    margin-top:100px; /* Pour centrer la div .card */
+    width: 80%; /* Ajustez la largeur selon vos besoins */
+    margin-left: 250px ;
+    margin-right: auto;
+}
+
+.card-box {
+    position: relative;
+    width: 400px; /* Largeur de chaque carte */
+    padding: 20px;
+    margin: 20px; /* Marge autour de chaque carte */
+    background: white;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    display: flex; /* Pour afficher les éléments enfants en ligne */
+    flex-direction: column; /* Pour empiler les éléments enfants verticalement */
+    justify-content: center; /* Pour centrer les éléments enfants verticalement */
+    align-items: center; /* Pour centrer les éléments enfants horizontalement */
+    text-align: center; /* Pour centrer le texte à l'intérieur de la carte */
+}
+.user{
+    margin-top:-5px;
+}

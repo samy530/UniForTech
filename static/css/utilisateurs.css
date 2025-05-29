@@ -1,0 +1,72 @@
+/* Styles CSS pour le tableau */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/*searchbar*/
+.input-container {
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto;
+width: 500px;
+position: relative;
+}
+
+.icon {
+position: absolute;
+right: 10px;
+top: calc(50% + 5px);
+transform: translateY(calc(-50% - 5px));
+}
+
+.input {
+width: 100%;
+height: 40px;
+padding: 10px;
+transition: .2s linear;
+border: 2.5px solid rgb(21, 201, 177);
+font-size: 14px;
+text-transform: uppercase;
+letter-spacing: 2px;
+}
+
+.input:focus {
+outline: none;
+border: 0.5px solid blue;
+box-shadow: -5px -5px 0px blue;
+}
+
+.input-container:hover > .icon {
+animation: anim 1s linear infinite;
+}
+
+@keyframes anim {
+0%,
+100% {
+transform: translateY(calc(-50% - 5px)) scale(1);
+}
+
+50% {
+transform: translateY(calc(-50% - 5px)) scale(1.1);
+}
+}
+h4{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}

@@ -1,0 +1,46 @@
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f6d365;
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right bottom, rgba(246, 211, 101, 1), rgba(253, 160, 133, 1));
+}
+.back-arrow {
+display: inline-block;
+position: relative;
+text-decoration: none;
+color: #007bff;
+font-size: 20px;
+padding-left: 20px;
+transition: color 0.2s;
+margin-left:30px;
+margin-top: 50px;
+}
+
+.back-arrow::before {
+content: '';
+display: inline-block;
+width: 30px;
+height: 30px;
+border-top: 2px solid #000000;
+border-left: 2px solid #007bff;
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%) rotate(-45deg);
+transition: left 0.2s, border-color 0.2s;
+}
+
+.back-arrow:hover {
+color: #0056b3;
+}
+
+.back-arrow:hover::before {
+left: -5px;
+border-color: #0056b3;
+}      
+.profile-photo-container {
+position: relative;
+display: inline-block;
+}
