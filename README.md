@@ -2,8 +2,8 @@
 ## Année universitaire 2023/2024
 ## 👨‍💻 Membres du projet
 - Samy M – [GitHub](https://github.com/samy530)  
--Meriem M  – [GitHub](https://github.com/)
--Rosa  – [GitHub](https://github.com/)
+- Meriem M  – [GitHub](https://github.com/)
+- Rosa  – [GitHub](https://github.com/)
 
 ## 🧠  Présentation du projet
 Le projet UniForTech consiste à concevoir et développer une plateforme web collaborative destinée au département informatique de l’université Mouloud Mammeri Tizi-Ouzou. Cette plateforme vise à faciliter l’accès et le partage de contenus pédagogiques (cours, travaux dirigés, mémoires, livres, etc.) afin de soutenir l’apprentissage des étudiants.
